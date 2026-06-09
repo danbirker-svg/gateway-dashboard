@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gateway Dashboard — Hermes</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="app">
+
+    <!-- ═══ Header ═══ -->
+    <header class="header">
+      <div class="header-left">
+        <h1><span class="logo">⚡</span> Hermes Gateway</h1>
+        <span class="version" id="gateway-version">v—</span>
+      </div>
+      <div class="header-right">
+        <span class="status-badge" id="gateway-status">● Loading…</span>
+        <span class="uptime" id="gateway-uptime">—</span>
+      </div>
+    </header>
+
+    <!-- ═══ Metric Cards ═══ -->
+    <section class="metrics-row">
+      <div class="metric-card">
+        <div class="metric-label">Messages (24h)</div>
+        <div class="metric-value" id="stat-msgs">—</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-label">Active Users (24h)</div>
+        <div class="metric-value" id="stat-users">—</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-label">API Latency</div>
+        <div class="metric-value" id="stat-latency">—</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-label">Error Rate</div>
+        <div class="metric-value" id="stat-errors">—</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-label">Uptime (30d)</div>
+        <div class="metric-value" id="stat-uptime">—</div>
+      </div>
+    </section>
+
+    <!-- ═══ Panels ═══ -->
+    <div class="panels">
+
+      <!-- Channels -->
+      <section class="panel channels-panel">
+        <h2>📡 Channels</h2>
+        <div class="channels-list" id="channels-list">
+          <div class="channel-row loading">Loading…</div>
+        </div>
+      </section>
+
+      <!-- Active Sessions -->
+      <section class="panel sessions-panel">
+        <h2>👥 Active Sessions</h2>
+        <div class="sessions-total" id="sessions-total">—</div>
+        <div class="sessions-breakdown" id="sessions-breakdown">
+        </div>
+      </section>
+
+      <!-- Recent Messages -->
+      <section class="panel messages-panel">
+        <h2>💬 Recent Messages</h2>
+        <div class="messages-feed" id="messages-feed">
+          <div class="msg-row loading">Loading…</div>
+        </div>
+      </section>
+
+    </div>
+
+    <!-- ═══ Footer ═══ -->
+    <footer class="footer">
+      <span>Gateway Dashboard v0.1.0</span>
+      <span>Refresh: <span id="refresh-countdown">5s</span></span>
+      <span>Node: <span id="node-name">—</span></span>
+    </footer>
+
+  </div>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>

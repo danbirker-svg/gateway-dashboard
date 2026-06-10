@@ -3,7 +3,6 @@
 A clean, dark-themed web dashboard for monitoring a Hermes Agent gateway.  
 Think Grafana-lite — real-time status, channels, sessions, and message feed.
 
-![Dashboard Screenshot](docs/screenshot.png)
 
 ## Features
 
